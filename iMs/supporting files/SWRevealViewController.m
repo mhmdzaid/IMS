@@ -1,5 +1,5 @@
 /*
-
+//revealToggle
  Copyright (c) 2013 Joan Lluch <joan.lluch@sweetwilliamsl.com>
  
  Permission is hereby granted, free of charge, to any person obtaining a copy

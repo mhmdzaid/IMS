@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		166F775B201B22DE00E042F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F775A201B22DE00E042F0 /* AppDelegate.swift */; };
-		166F775D201B22DE00E042F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F775C201B22DE00E042F0 /* ViewController.swift */; };
 		166F7760201B22DE00E042F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166F775E201B22DE00E042F0 /* Main.storyboard */; };
 		166F7762201B22DE00E042F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 166F7761201B22DE00E042F0 /* Assets.xcassets */; };
 		166F7765201B22DE00E042F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166F7763201B22DE00E042F0 /* LaunchScreen.storyboard */; };
 		166F7770201B323400E042F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F776F201B323400E042F0 /* SWRevealViewController.m */; };
+		166F7777201B560200E042F0 /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F7776201B560200E042F0 /* chatViewController.swift */; };
+		166F7779201B561D00E042F0 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F7778201B561D00E042F0 /* ChannelViewController.swift */; };
 		3029CA0DE21AE2ADF7D87E97 /* Pods_iMs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D351952020E9C3959343DAA4 /* Pods_iMs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		166F7757201B22DE00E042F0 /* iMs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		166F775A201B22DE00E042F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		166F775C201B22DE00E042F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		166F775F201B22DE00E042F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		166F7761201B22DE00E042F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		166F7764201B22DE00E042F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		166F776D201B323300E042F0 /* iMs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMs-Bridging-Header.h"; sourceTree = "<group>"; };
 		166F776E201B323400E042F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		166F776F201B323400E042F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		166F7776201B560200E042F0 /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
+		166F7778201B561D00E042F0 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2DC64A3FEA84B1AE05566F6D /* Pods-iMs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMs/Pods-iMs.debug.xcconfig"; sourceTree = "<group>"; };
 		3F44C397C499D43305584E78 /* Pods-iMs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMs.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMs/Pods-iMs.release.xcconfig"; sourceTree = "<group>"; };
 		D351952020E9C3959343DAA4 /* Pods_iMs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,9 @@
 		166F774E201B22DE00E042F0 = {
 			isa = PBXGroup;
 			children = (
+				166F7775201B55D900E042F0 /* controller */,
+				166F7774201B55D100E042F0 /* view */,
+				166F7771201B55B600E042F0 /* model */,
 				166F776C201B31FE00E042F0 /* supporting files */,
 				166F7759201B22DE00E042F0 /* iMs */,
 				166F7758201B22DE00E042F0 /* Products */,
@@ -67,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				166F775A201B22DE00E042F0 /* AppDelegate.swift */,
-				166F775C201B22DE00E042F0 /* ViewController.swift */,
 				166F775E201B22DE00E042F0 /* Main.storyboard */,
 				166F7761201B22DE00E042F0 /* Assets.xcassets */,
 				166F7763201B22DE00E042F0 /* LaunchScreen.storyboard */,
@@ -84,6 +88,29 @@
 				166F776D201B323300E042F0 /* iMs-Bridging-Header.h */,
 			);
 			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		166F7771201B55B600E042F0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		166F7774201B55D100E042F0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		166F7775201B55D900E042F0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				166F7776201B560200E042F0 /* chatViewController.swift */,
+				166F7778201B561D00E042F0 /* ChannelViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		62C50CFA9479EB290D249391 /* Pods */ = {
@@ -239,8 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				166F775D201B22DE00E042F0 /* ViewController.swift in Sources */,
+				166F7777201B560200E042F0 /* chatViewController.swift in Sources */,
 				166F775B201B22DE00E042F0 /* AppDelegate.swift in Sources */,
+				166F7779201B561D00E042F0 /* ChannelViewController.swift in Sources */,
 				166F7770201B323400E042F0 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
