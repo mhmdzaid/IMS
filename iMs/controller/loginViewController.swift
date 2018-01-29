@@ -21,6 +21,9 @@ class loginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func createACCount(_ sender: Any) {
+        performSegue(withIdentifier: "toCreateAccount", sender: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
