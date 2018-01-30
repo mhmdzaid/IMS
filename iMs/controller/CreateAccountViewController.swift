@@ -23,7 +23,17 @@ class CreateAccountViewController: UIViewController {
 
             Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion:{(user,error)in
 
-                if error != nil {print(error!)}
+                if error != nil
+                {
+                    
+                    
+                    let alert = UIAlertController.init(title: "Error", message: String(describing: error), preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    self.present(alert, animated: true, completion: nil)
+                
+                   alert.dismiss(animated: true, completion: nil)
+                    
+                }
                 else{print("successfully registered")}
             })
         }
