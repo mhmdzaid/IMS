@@ -343,16 +343,25 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="XZM-60-qMh" eventType="touchUpInside" id="rOL-7X-wTq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jK-Wy-gdz">
                                 <rect key="frame" x="135" y="491" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate Color"/>
+                                <connections>
+                                    <action selector="chooseColor:" destination="XZM-60-qMh" eventType="touchUpInside" id="Utu-dJ-RcF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1t-If-hJg">
                                 <rect key="frame" x="138" y="444" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="choose avatar"/>
+                                <connections>
+                                    <action selector="chooseAvatar:" destination="XZM-60-qMh" eventType="touchUpInside" id="6Dq-2O-oHi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create an Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvW-0Y-N7I">
                                 <rect key="frame" x="80" y="69" width="214" height="29"/>
@@ -397,7 +406,7 @@
                                         <rect key="frame" x="0.0" y="106" width="250" height="21"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaU-6t-bBh">
                                         <rect key="frame" x="0.0" y="142" width="250" height="2"/>
@@ -411,7 +420,7 @@
                                         <rect key="frame" x="0.0" y="159" width="250" height="21"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beB-WK-TPs">
                                         <rect key="frame" x="0.0" y="195" width="250" height="2"/>
@@ -432,7 +441,13 @@
                         <viewLayoutGuide key="safeArea" id="Mrv-KC-TPT"/>
                     </view>
                     <connections>
+                        <outlet property="avatar" destination="7ZP-mU-bJP" id="fln-Dd-gL6"/>
+                        <outlet property="confirm_password" destination="1Uq-rJ-hOS" id="Guc-NS-vr7"/>
+                        <outlet property="email" destination="Y5b-FD-O6D" id="cg0-pJ-elP"/>
+                        <outlet property="password" destination="XeV-FP-2HG" id="MLd-R9-Vcl"/>
+                        <outlet property="username" destination="p4d-Wb-lqj" id="mIR-ya-3qZ"/>
                         <segue destination="6ac-i0-YFb" kind="unwind" identifier="unwindSegue" unwindAction="prepareforUnwindWithSegue:" id="utE-5k-DrD"/>
+                        <segue destination="6ac-i0-YFb" kind="unwind" unwindAction="prepareforUnwindWithSegue:" id="aon-QM-Hpj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvO-bd-FQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
