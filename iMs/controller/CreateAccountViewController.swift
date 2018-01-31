@@ -18,20 +18,31 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirm_password: UITextField!
     @IBOutlet weak var avatar: UIImageView!
+    
+    
+    
     func Check_Account(){
         if password.text == confirm_password.text {
 
             Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion:{(user,error)in
-
+                var str_err = String(describing: error)
+                let inx1 = str_err.index(str_err.startIndex, offsetBy: 53)
+                let inx2 = str_err.index(of:".")
+                str_err = str_err[inx1...inx2]
+                print(str_err)
                 if error != nil
                 {
                     
                     
-                    let alert = UIAlertController.init(title: "Error", message: String(describing: error), preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController.init(title: "Error", message: str_err, preferredStyle: UIAlertControllerStyle.alert)
                     
-                    self.present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion:{
+                        alert.view.superview?.isUserInteractionEnabled = true
+                        alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertClose)))
+                    })
                 
-                   alert.dismiss(animated: true, completion: nil)
+                
+                
                     
                 }
                 else{print("successfully registered")}
@@ -40,13 +51,17 @@ class CreateAccountViewController: UIViewController {
         else {
             let alert : UIAlertController = UIAlertController.init(title: "Error", message: "password doesn't match ", preferredStyle: UIAlertControllerStyle.alert)
             
-          present(alert, animated: true, completion: nil)
-            alert.dismiss(animated: true, completion: {self.password.text = ""
-                self.confirm_password.text = ""
+            self.present(alert, animated: true, completion:{
+                alert.view.superview?.isUserInteractionEnabled = true
+                alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertClose)))
             })
     
         }
  }
+    func alertClose(){
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
