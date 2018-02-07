@@ -26,8 +26,19 @@ class messagingVCViewController: UIViewController,UITableViewDataSource,UITableV
         let cell = tableview.dequeueReusableCell(withIdentifier: "customed", for: indexPath) as! TableViewCell
         
         cell.messagebody.text = messages[indexPath.row].messagebody
+        cell.messagebody.textColor = UIColor.white
         cell.sender.text = messages[indexPath.row].Sender
+        cell.sender.textColor = UIColor.red
         cell.messageBackground.layer.cornerRadius = 15.0
+        if Auth.auth().currentUser?.email == cell.sender.text {
+            cell.messageBackground.backgroundColor = #colorLiteral(red: 0.9973747134, green: 0.4345071912, blue: 0, alpha: 1)
+            
+        }
+        else
+        {
+            cell.messageBackground.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+            
+        }
         
         return cell
     }

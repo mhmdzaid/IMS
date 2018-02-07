@@ -62,6 +62,7 @@ class ChannelViewController: UIViewController ,UITableViewDataSource,UITableView
         self.revealViewController().rearViewRevealWidth = self.view.frame.width-80
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        self.tableview.separatorStyle = .none
         
         // Do any additional setup after loading the view.
     }
