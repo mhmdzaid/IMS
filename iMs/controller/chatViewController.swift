@@ -11,9 +11,18 @@ import UIKit
 class chatViewController: UIViewController {
 
     
+    @IBOutlet weak var chatImg: UIImageView!
+    @IBOutlet weak var sportImg: UIImageView!
+    @IBOutlet weak var newImg: UIImageView!
     @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        chatImg.layer.cornerRadius = 30
+        chatImg.layer.masksToBounds =  true
+        sportImg.layer.cornerRadius = 30
+        sportImg.layer.masksToBounds = true
+        newImg.layer.cornerRadius = 30
+        newImg.layer.masksToBounds = true
         btn.addTarget(self.revealViewController(), action:#selector(SWRevealViewController.revealToggle(_:)), for:.touchUpInside )
     
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())

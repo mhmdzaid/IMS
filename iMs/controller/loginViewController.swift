@@ -29,12 +29,13 @@ class loginViewController: UIViewController {
                 let inx1 = str_err.index(str_err.startIndex, offsetBy: 53)
                 let inx2 = str_err.index(of:".")
                 str_err = str_err[inx1...inx2]
-
+                 SVProgressHUD.dismiss()
                 let alert = UIAlertController.init(title: "Error", message: str_err, preferredStyle: UIAlertControllerStyle.alert)
                 
                 self.present(alert, animated: true, completion:{
                     alert.view.superview?.isUserInteractionEnabled = true
                     alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertClose)))
+                   
                 })
             }
             else {
@@ -75,8 +76,9 @@ class loginViewController: UIViewController {
         else if segue.identifier == " closeVC"
         {
              let channelVC = segue.destination as! ChannelViewController
-            channelVC.loginbtn.setTitle("Logout", for: UIControlState.normal)
+            channelVC.loginbtn.setTitle("Login", for: UIControlState.normal)
         }
+        
     }
     
 

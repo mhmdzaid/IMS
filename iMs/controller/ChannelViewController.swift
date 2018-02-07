@@ -73,6 +73,11 @@ class ChannelViewController: UIViewController ,UITableViewDataSource,UITableView
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        if loginbtn.titleLabel?.text == "Logout"{
+            loginbtn.setTitle("Login", for: UIControlState.normal)
+            login = false
+        }
+        
         
     }
     func alertClose(){

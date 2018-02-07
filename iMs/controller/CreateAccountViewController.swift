@@ -37,7 +37,7 @@ class CreateAccountViewController: UIViewController {
                     let inx1 = str_err.index(str_err.startIndex, offsetBy: 53)
                     let inx2 = str_err.index(of:".")
                     str_err = str_err[inx1...inx2]
-                    
+                     SVProgressHUD.dismiss()
                     let alert = UIAlertController.init(title: "Error", message: str_err, preferredStyle: UIAlertControllerStyle.alert)
                     
                     self.present(alert, animated: true, completion:{
