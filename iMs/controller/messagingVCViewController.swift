@@ -114,6 +114,7 @@ class messagingVCViewController: UIViewController,UITableViewDataSource,UITableV
         let myDB = Database.database().reference().child("Messages ")
         self.tableview.delegate = self
         self.tableview.dataSource = self
+         tableview.backgroundView = UIImageView(image: UIImage(named: "3575854-imperial-wallpapers"))
         self.textfielld.delegate = self
         self.sendBtn.layer.cornerRadius = 10.0
         tableview.register(UINib(nibName:"TableViewCell",bundle:nil), forCellReuseIdentifier: "customed")
@@ -123,6 +124,7 @@ class messagingVCViewController: UIViewController,UITableViewDataSource,UITableV
         
         tableview.addGestureRecognizer(tap)
        retrieveMessages()
+       
     }
     
     func tableviewTapped(){

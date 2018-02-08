@@ -7,27 +7,29 @@
 //
 
 import UIKit
-
-class chatViewController: UIViewController {
+import IBAnimatable
+class chatViewController: UIViewController ,UIScrollViewDelegate{
 
     
-    @IBOutlet weak var chatImg: UIImageView!
-    @IBOutlet weak var sportImg: UIImageView!
-    @IBOutlet weak var newImg: UIImageView!
+    @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var chatImg: AnimatableImageView!
+    @IBOutlet weak var sportImg: AnimatableImageView!
+    @IBOutlet weak var newImg: AnimatableImageView!
     @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scrollview.delegate = self
         chatImg.layer.cornerRadius = 30
         chatImg.layer.masksToBounds =  true
         sportImg.layer.cornerRadius = 30
         sportImg.layer.masksToBounds = true
         newImg.layer.cornerRadius = 30
         newImg.layer.masksToBounds = true
-        btn.addTarget(self.revealViewController(), action:#selector(SWRevealViewController.revealToggle(_:)), for:.touchUpInside )
+             btn.addTarget(self.revealViewController(), action:#selector(SWRevealViewController.revealToggle(_:)), for:.touchUpInside )
     
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-      // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,12 @@ class chatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        chatImg.animate(.squeezeFade(way: .in, direction: .left))
+        sportImg.animate(.squeezeFade(way: .in, direction: .left))
+        newImg.animate(.squeezeFade(way: .in, direction: .left))
 
+    }
     /*
     // MARK: - Navigation
 

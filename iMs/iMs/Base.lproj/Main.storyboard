@@ -77,27 +77,27 @@
                                     <constraint firstItem="3vY-Dh-lfu" firstAttribute="leading" secondItem="fvN-k2-gMj" secondAttribute="leading" constant="21" id="wPT-JZ-DJN"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Tqn-6u-R0L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackbackground2" translatesAutoresizingMaskIntoConstraints="NO" id="Tqn-6u-R0L">
                                 <rect key="frame" x="0.0" y="77" width="375" height="923"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saS-Si-Jqm">
                                 <rect key="frame" x="0.0" y="77" width="375" height="923"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-z0-1N6">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-z0-1N6" customClass="AnimatableImageView" customModule="IBAnimatable">
                                         <rect key="frame" x="35" y="323" width="305" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="305" id="Z3t-HF-Sa4"/>
                                             <constraint firstAttribute="height" constant="180" id="vDk-hC-dqz"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adidas-nemeziz_1e2owz4b81q7h1qsmf3iiv9erk" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-dR-a4b">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adidas-nemeziz_1e2owz4b81q7h1qsmf3iiv9erk" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-dR-a4b" customClass="AnimatableImageView" customModule="IBAnimatable">
                                         <rect key="frame" x="35" y="15" width="305" height="187"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="305" id="3YH-k8-lsi"/>
                                             <constraint firstAttribute="height" constant="187" id="aXM-BH-fwq"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AAEAAQAAAAAAAAsdAAAAJDMyNDdkMzIwLTBmZDAtNDVhOS05MDliLTkzZWUwMjJiMzI1Zg" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-Td-9RK">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AAEAAQAAAAAAAAsdAAAAJDMyNDdkMzIwLTBmZDAtNDVhOS05MDliLTkzZWUwMjJiMzI1Zg" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-Td-9RK" customClass="AnimatableImageView" customModule="IBAnimatable">
                                         <rect key="frame" x="35" y="634" width="305" height="174"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="174" id="DdU-2t-xPk"/>
@@ -212,6 +212,7 @@
                         <outlet property="btn" destination="3vY-Dh-lfu" id="eQO-CZ-MZT"/>
                         <outlet property="chatImg" destination="2Zr-z0-1N6" id="u2p-zd-ZBf"/>
                         <outlet property="newImg" destination="YTG-Td-9RK" id="C38-Iu-ZIM"/>
+                        <outlet property="scrollview" destination="saS-Si-Jqm" id="Ids-fN-Kw2"/>
                         <outlet property="sportImg" destination="L1z-dR-a4b" id="hWh-bW-894"/>
                     </connections>
                 </viewController>
@@ -636,12 +637,25 @@
                                     <constraint firstAttribute="height" constant="487" id="Npb-jk-DfR"/>
                                     <constraint firstAttribute="width" constant="375" id="X5S-u9-824"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAu-0F-McB">
                                 <rect key="frame" x="0.0" y="560" width="375" height="107"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-Xa-KKc">
+                                        <rect key="frame" x="287" y="31" width="68" height="46"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="A73-5K-roV"/>
+                                            <constraint firstAttribute="width" constant="68" id="PNs-6R-ZRD"/>
+                                        </constraints>
+                                        <state key="normal" image="design"/>
+                                        <connections>
+                                            <action selector="sendBTN:" destination="wr5-iq-tLI" eventType="touchUpInside" id="Fke-wf-Yhf"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzg-Dz-Xsz">
-                                        <rect key="frame" x="8" y="30" width="252" height="47"/>
+                                        <rect key="frame" x="27" y="30" width="252" height="47"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.43299793669999997" green="0.66293945440000002" blue="0.84787436549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -653,18 +667,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-Xa-KKc">
-                                        <rect key="frame" x="266" y="31" width="89" height="46"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="A73-5K-roV"/>
-                                            <constraint firstAttribute="width" constant="89" id="PNs-6R-ZRD"/>
-                                        </constraints>
-                                        <state key="normal" image="send"/>
-                                        <connections>
-                                            <action selector="sendBTN:" destination="wr5-iq-tLI" eventType="touchUpInside" id="Fke-wf-Yhf"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43299793669999997" green="0.66293945440000002" blue="0.84787436549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -672,7 +674,7 @@
                                     <constraint firstItem="zzg-Dz-Xsz" firstAttribute="top" secondItem="IAu-0F-McB" secondAttribute="top" constant="30" id="MpP-A7-YSG"/>
                                     <constraint firstAttribute="width" constant="375" id="SyC-nY-coj"/>
                                     <constraint firstItem="z3e-Xa-KKc" firstAttribute="top" secondItem="IAu-0F-McB" secondAttribute="top" constant="31" id="UTL-bG-QhO"/>
-                                    <constraint firstItem="z3e-Xa-KKc" firstAttribute="leading" secondItem="zzg-Dz-Xsz" secondAttribute="trailing" constant="6" id="q0O-jl-9iz"/>
+                                    <constraint firstItem="z3e-Xa-KKc" firstAttribute="leading" secondItem="zzg-Dz-Xsz" secondAttribute="trailing" constant="8" id="q0O-jl-9iz"/>
                                     <constraint firstAttribute="height" constant="107" id="t6M-a5-UFS"/>
                                     <constraint firstAttribute="trailing" secondItem="z3e-Xa-KKc" secondAttribute="trailing" constant="20" id="tAI-Cc-WCI"/>
                                 </constraints>
@@ -682,6 +684,7 @@
                         <constraints>
                             <constraint firstItem="KTm-qN-tkg" firstAttribute="leading" secondItem="rGo-0k-GCO" secondAttribute="leading" id="0Xd-ox-nLU"/>
                             <constraint firstItem="IAu-0F-McB" firstAttribute="trailing" secondItem="rGo-0k-GCO" secondAttribute="trailing" id="5ri-hQ-woM"/>
+                            <constraint firstItem="J1B-GH-Equ" firstAttribute="top" secondItem="rGo-0k-GCO" secondAttribute="top" constant="53" id="Lcb-Q7-6Wd"/>
                             <constraint firstItem="KTm-qN-tkg" firstAttribute="trailing" secondItem="rGo-0k-GCO" secondAttribute="trailing" id="Lg7-HD-xf4"/>
                             <constraint firstItem="J1B-GH-Equ" firstAttribute="trailing" secondItem="rGo-0k-GCO" secondAttribute="trailing" id="NQj-LO-9Ba"/>
                             <constraint firstItem="KTm-qN-tkg" firstAttribute="trailing" secondItem="rGo-0k-GCO" secondAttribute="trailing" id="S1W-MT-yJN"/>
@@ -711,13 +714,13 @@
         <image name="AAEAAQAAAAAAAAsdAAAAJDMyNDdkMzIwLTBmZDAtNDVhOS05MDliLTkzZWUwMjJiMzI1Zg" width="1024" height="576"/>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="adidas-nemeziz_1e2owz4b81q7h1qsmf3iiv9erk" width="1920" height="1080"/>
+        <image name="blackbackground2" width="564" height="1002"/>
         <image name="chat" width="700" height="420"/>
         <image name="closeButton" width="28" height="28"/>
-        <image name="images" width="168" height="300"/>
+        <image name="design" width="504" height="504"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="pre-a" width="483" height="874"/>
         <image name="profileDefault" width="192" height="192"/>
-        <image name="send" width="30" height="30"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
     </resources>
