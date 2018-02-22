@@ -12,8 +12,9 @@ import FirebaseDatabase
 import FirebaseCore
 import Firebase
 import SVProgressHUD
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, delegate {
    
+    var bgcolor : UIColor?
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -73,8 +74,13 @@ class CreateAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createAccBtn.layer.cornerRadius = 10
-        // Do any additional setup after loading the view.
+        
+        
+        
+        
     }
+    
+    
     @IBAction func createAccountButton(_ sender: Any) {
         
        
@@ -87,9 +93,14 @@ class CreateAccountViewController: UIViewController {
 
     @IBAction func chooseColor(_ sender: Any) {
        
-
+        let r = CGFloat(arc4random_uniform(255))/255
+        let g = CGFloat(arc4random_uniform(255))/255
+        let b = CGFloat(arc4random_uniform(255))/255
+        bgcolor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        self.avatar.backgroundColor = bgcolor
     }
     @IBAction func chooseAvatar(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAvatarPicker", sender: self)
     }
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "created"
@@ -104,24 +115,22 @@ class CreateAccountViewController: UIViewController {
             channelVC.loginbtn.setTitle("Login", for: UIControlState.normal)
 
         }
+    else if segue.identifier == "toAvatarPicker"
+        {
+            let avatarPicker = segue.destination as? avatarPickerViewController
+            avatarPicker?.delegateProperty = self
+            
+            
+        }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  
     @IBAction func closepressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //delegate func to send selected avatar
+    func setChoosedImage(ImgName Img: UIImage) {
+        self.avatar.image = Img
     }
-    */
-
 }

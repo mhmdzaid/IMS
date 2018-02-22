@@ -27,6 +27,9 @@
 		16ACB5AC20264A560072652F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACB5AA20264A560072652F /* TableViewCell.swift */; };
 		16ACB5AD20264A560072652F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ACB5AB20264A560072652F /* TableViewCell.xib */; };
 		16ACB5B120264EC40072652F /* messagingVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACB5B020264EC40072652F /* messagingVCViewController.swift */; };
+		16B2E2732032148C00CC211F /* avatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2E2722032148C00CC211F /* avatarPickerViewController.swift */; };
+		16B2E2752032217100CC211F /* collectionViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2E2742032217100CC211F /* collectionViewCellCollectionViewCell.swift */; };
+		16B2E277203256FB00CC211F /* delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2E276203256FA00CC211F /* delegate.swift */; };
 		3029CA0DE21AE2ADF7D87E97 /* Pods_iMs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D351952020E9C3959343DAA4 /* Pods_iMs.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		16ACB5AA20264A560072652F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		16ACB5AB20264A560072652F /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		16ACB5B020264EC40072652F /* messagingVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagingVCViewController.swift; sourceTree = "<group>"; };
+		16B2E2722032148C00CC211F /* avatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarPickerViewController.swift; sourceTree = "<group>"; };
+		16B2E2742032217100CC211F /* collectionViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		16B2E276203256FA00CC211F /* delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delegate.swift; sourceTree = "<group>"; };
 		2DC64A3FEA84B1AE05566F6D /* Pods-iMs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMs/Pods-iMs.debug.xcconfig"; sourceTree = "<group>"; };
 		3F44C397C499D43305584E78 /* Pods-iMs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMs.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMs/Pods-iMs.release.xcconfig"; sourceTree = "<group>"; };
 		D351952020E9C3959343DAA4 /* Pods_iMs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +150,7 @@
 				1693816B201C19F0006481BC /* gradientView.swift */,
 				16ACB5AA20264A560072652F /* TableViewCell.swift */,
 				16ACB5AB20264A560072652F /* TableViewCell.xib */,
+				16B2E2742032217100CC211F /* collectionViewCellCollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 				161DE60F201D8934006B8088 /* loginViewController.swift */,
 				165CB939201F1F29000BFD2C /* CreateAccountViewController.swift */,
 				16ACB5B020264EC40072652F /* messagingVCViewController.swift */,
+				16B2E2722032148C00CC211F /* avatarPickerViewController.swift */,
+				16B2E276203256FA00CC211F /* delegate.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -327,9 +336,12 @@
 				165CB93A201F1F29000BFD2C /* CreateAccountViewController.swift in Sources */,
 				16ACB5AC20264A560072652F /* TableViewCell.swift in Sources */,
 				1638DC132029BE3100F2CFB3 /* SVProgressAnimatedView.m in Sources */,
+				16B2E277203256FB00CC211F /* delegate.swift in Sources */,
+				16B2E2752032217100CC211F /* collectionViewCellCollectionViewCell.swift in Sources */,
 				166F7777201B560200E042F0 /* chatViewController.swift in Sources */,
 				166F775B201B22DE00E042F0 /* AppDelegate.swift in Sources */,
 				1638DC172029BE3100F2CFB3 /* SVIndefiniteAnimatedView.m in Sources */,
+				16B2E2732032148C00CC211F /* avatarPickerViewController.swift in Sources */,
 				1638DC142029BE3100F2CFB3 /* SVProgressHUD.m in Sources */,
 				161DE610201D8934006B8088 /* loginViewController.swift in Sources */,
 				1693816C201C19F0006481BC /* gradientView.swift in Sources */,

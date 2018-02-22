@@ -147,11 +147,7 @@ class messagingVCViewController: UIViewController,UITableViewDataSource,UITableV
         
         tableview.rowHeight = UITableViewAutomaticDimension
         tableview.estimatedRowHeight = 120.0
-//        if messages.count > 2
-//        {
-//            let index = IndexPath(row: (messages.count)-1, section: 0)
-//            tableview.scrollToRow(at: index, at: .middle, animated: true)
-//        }
+
     }
 
     @IBAction func backBtn(_ sender: Any) {
